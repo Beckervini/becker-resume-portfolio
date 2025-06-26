@@ -111,10 +111,10 @@ export class InteractionManager {
     animateCardEnter(card) {
         const icon = card.querySelector('.skill-icon i');
         if (icon) {
-            // Instant transition with no delay
+            // Instant transition
             icon.style.transition = 'all 0.1s ease';
             icon.style.transform = 'scale(1.1)';
-            icon.style.color = '#3182ce';
+            icon.style.color = 'white';
         }
         card.style.borderColor = '#4299e1';
     }
@@ -122,10 +122,10 @@ export class InteractionManager {
     animateCardLeave(card) {
         const icon = card.querySelector('.skill-icon i');
         if (icon) {
-            // Instant transition with no delay
+            // Instant transition
             icon.style.transition = 'all 0.1s ease';
             icon.style.transform = 'scale(1)';
-            icon.style.color = '#4299e1';
+            icon.style.color = 'white';
         }
         card.style.borderColor = 'rgba(226, 232, 240, 0.8)';
     }

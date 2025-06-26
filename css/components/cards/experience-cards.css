@@ -38,10 +38,6 @@
     opacity: 1;
 }
 
-/* Remove nth-child delays for experience cards */
-.experience-card:nth-child(1) { transition-delay: 0.1s; }
-.experience-card:nth-child(2) { transition-delay: 0.3s; }
-
 .experience-card::before {
     content: '';
     position: absolute;
