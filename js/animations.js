@@ -1,4 +1,3 @@
-
 import { CONFIG } from './config.js';
 
 // Classe para gerenciar animações
@@ -44,14 +43,13 @@ export class AnimationManager {
         this.staggerAnimation(animatedElements);
     }
     
-    // Animação escalonada para elementos
+    // Animação simultânea para elementos (sem delay escalonado)
     staggerAnimation(elements) {
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-                element.style.animation = 'subtle-bounce 0.6s ease';
-            }, index * CONFIG.ANIMATION_TIMING.BOUNCE_DELAY);
+        elements.forEach((element) => {
+            // Remove o delay baseado no index - todos animam ao mesmo tempo
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+            element.style.animation = 'subtle-bounce 0.6s ease';
         });
     }
     

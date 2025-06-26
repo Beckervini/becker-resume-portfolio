@@ -69,9 +69,12 @@
     margin-top: 100px;
     padding: 2rem;
     max-width: 1000px;
-    width: 100%;
-    margin-right: auto;
+    width: calc(100% - 320px); /* Account for sidebar + margins */
+    margin-right: 2rem; /* Ensure right margin matches left spacing */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
 /* Container centralizado para melhor layout */
@@ -87,6 +90,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
 }
 
 .section.visible {
@@ -99,18 +103,21 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 /* Timeline de Experiências */
@@ -119,6 +126,8 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+/* ... keep existing code (footer, mobile menu toggle, and media queries) */
 
 /* Rodapé */
 .footer {
@@ -170,6 +179,8 @@
     .main-content {
         margin-left: 0;
         padding: 1rem;
+        width: 100%;
+        margin-right: 0;
     }
 
     .header-content {
