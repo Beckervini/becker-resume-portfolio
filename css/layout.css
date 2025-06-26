@@ -65,16 +65,16 @@
 
 /* Conteúdo Principal - Melhor Centralização */
 .main-content {
-    margin-left: 300px; /* Fixed margin to account for sidebar */
-    margin-right: 2rem; /* Balanced right margin */
+    margin-left: 300px;
+    margin-right: 2rem;
     margin-top: 100px;
     padding: 2rem;
     max-width: 1000px;
-    width: calc(100vw - 340px); /* Calculate remaining width */
+    width: calc(100vw - 340px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
 /* Container centralizado para melhor layout */
@@ -84,18 +84,17 @@
     width: 100%;
 }
 
-/* Seções */
+/* Seções - Sem animações de scroll */
 .section {
     margin-bottom: 4rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: none;
     width: 100%;
 }
 
 .section.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* Grids */

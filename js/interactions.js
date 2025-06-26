@@ -10,10 +10,27 @@ export class InteractionManager {
     init() {
         this.setupMobileMenu();
         this.setupScrollEffects();
-        this.setupCardInteractions();
         this.setupButtonEffects();
-        this.setupTypingEffect();
         this.setupKeyboardNavigation();
+        this.showAllContent();
+    }
+    
+    // Mostra todo o conteúdo imediatamente
+    showAllContent() {
+        const sections = document.querySelectorAll(CONFIG.SELECTORS.SECTIONS);
+        const cards = document.querySelectorAll(CONFIG.SELECTORS.CARDS);
+        
+        sections.forEach(section => {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+            section.classList.add(CONFIG.CLASSES.VISIBLE);
+        });
+        
+        cards.forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+            card.classList.add('animate');
+        });
     }
     
     setupMobileMenu() {
@@ -61,14 +78,11 @@ export class InteractionManager {
     
     setupScrollEffects() {
         const header = document.querySelector(CONFIG.SELECTORS.HEADER);
-        let lastScrollTop = 0;
         
         window.addEventListener('scroll', () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             this.updateHeaderStyle(header, scrollTop);
-            this.updateParallax(scrollTop);
             this.updateSidebarScale(scrollTop);
-            lastScrollTop = scrollTop;
         });
     }
     
@@ -84,29 +98,12 @@ export class InteractionManager {
         }
     }
     
-    updateParallax(scrollTop) {
-        const hero = document.querySelector('.hero-section');
-        if (hero && scrollTop < window.innerHeight) {
-            const parallaxSpeed = scrollTop * 0.3;
-            hero.style.transform = `translateY(${parallaxSpeed}px)`;
-        }
-    }
-    
     updateSidebarScale(scrollTop) {
         const sidebar = document.querySelector(CONFIG.SELECTORS.SIDEBAR);
         if (sidebar) {
             const scale = scrollTop > 100 ? 'translateY(-50%) scale(0.98)' : 'translateY(-50%) scale(1)';
             sidebar.style.transform = scale;
         }
-    }
-    
-    setupCardInteractions() {
-        // Remove all custom card hover handlers - let CSS handle everything instantly
-        const allCards = document.querySelectorAll('.skill-card, .experience-card, .project-card, .content-card, .formation-card, .cert-card');
-        allCards.forEach(card => {
-            // Remove any existing event listeners that might cause delays
-            card.replaceWith(card.cloneNode(true));
-        });
     }
     
     setupButtonEffects() {
@@ -116,16 +113,6 @@ export class InteractionManager {
                 this.animationManager.createRippleEffect(button, e);
             });
         });
-    }
-    
-    setupTypingEffect() {
-        const mainTitle = document.querySelector('.main-title');
-        if (mainTitle) {
-            const text = mainTitle.textContent;
-            setTimeout(() => {
-                this.animationManager.typeWriter(mainTitle, text);
-            }, 800);
-        }
     }
     
     setupKeyboardNavigation() {

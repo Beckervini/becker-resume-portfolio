@@ -1,5 +1,5 @@
 
-// Script principal refatorado e otimizado
+// Script principal simplificado - apenas interações com mouse
 import { CONFIG } from './js/config.js';
 import { AnimationManager } from './js/animations.js';
 import { NavigationManager } from './js/navigation.js';
@@ -17,7 +17,7 @@ class PortfolioApp {
     init() {
         document.addEventListener('DOMContentLoaded', () => {
             this.initializeManagers();
-            this.prepareAnimations();
+            this.showContentImmediately();
             this.setupPerformanceOptimizations();
         });
         
@@ -38,21 +38,21 @@ class PortfolioApp {
         }
     }
     
-    prepareAnimations() {
-        // Prepara elementos para animação
+    showContentImmediately() {
+        // Remove todos os estilos de animação e mostra o conteúdo
         const sections = document.querySelectorAll(CONFIG.SELECTORS.SECTIONS);
         const cards = document.querySelectorAll(CONFIG.SELECTORS.CARDS);
         
         sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            section.style.opacity = '1';
+            section.style.transform = 'none';
+            section.style.transition = 'none';
         });
         
-        cards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+        cards.forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'none';
+            card.style.transition = 'none';
         });
     }
     
