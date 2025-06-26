@@ -39,20 +39,17 @@ export class AnimationManager {
         section.style.transform = 'translateY(0)';
         section.classList.add(CONFIG.CLASSES.VISIBLE);
         
-        // Anima elementos filhos instantaneamente
+        // Anima elementos filhos instantaneamente e simultaneamente
         const animatedElements = section.querySelectorAll(CONFIG.SELECTORS.CARDS);
-        this.instantAnimation(animatedElements);
+        this.staggerAnimation(animatedElements);
     }
     
-    // Animação instantânea para todos os elementos (sem qualquer delay)
-    instantAnimation(elements) {
+    // Animação simultânea para todos os elementos (sem qualquer delay)
+    staggerAnimation(elements) {
         elements.forEach((element) => {
-            // Todos os elementos animam instantaneamente sem delay
             element.style.opacity = '1';
             element.style.transform = 'translateY(0)';
-            element.classList.add('animate');
-            // Remove qualquer animação de bounce para evitar delays adicionais
-            element.style.animation = 'none';
+            element.style.animation = 'subtle-bounce 0.6s ease';
         });
     }
     
@@ -117,9 +114,9 @@ export class AnimationManager {
                     }
                 }
                 
-                @keyframes float {
-                    0%, 100% { transform: rotate(0deg) translateY(0px); }
-                    50% { transform: rotate(180deg) translateY(-10px); }
+                @keyframes subtle-bounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-5px); }
                 }
             `;
             document.head.appendChild(style);

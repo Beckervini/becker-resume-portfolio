@@ -27,7 +27,7 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.05s ease; /* Ultra-fast transitions */
+    transition: all 0.05s ease;
     transform: translateX(-30px);
     opacity: 0;
     cursor: pointer;
@@ -50,7 +50,7 @@
     border: 3px solid white;
     box-shadow: 0 0 0 3px #4299e1;
     z-index: 2;
-    transition: all 0.05s ease; /* Ultra-fast transitions */
+    transition: all 0.05s ease;
 }
 
 .experience-card:hover {
