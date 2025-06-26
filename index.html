@@ -1,24 +1,403 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>becker-resume-portfolio</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Becker Prediger - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header-fixed">
+        <div class="header-content">
+            <div class="header-left">
+                <h3>Currículo Vinicius Becker</h3>
+            </div>
+            <div class="header-right">
+                <a href="#" class="social-btn linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+                <a href="#" class="social-btn github">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <meta property="og:title" content="becker-resume-portfolio" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Menu Lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-content">
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link active">Sobre</a></li>
+                <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experiencias" class="nav-link">Experiências</a></li>
+                <li><a href="#formacao" class="nav-link">Formação</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Seção Sobre -->
+        <section id="sobre" class="section hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">Vinicius Becker Prediger</h1>
+                <h2 class="subtitle">Desenvolvedor Backend & Full Stack</h2>
+                <p class="hero-description">
+                    Apaixonado por tecnologia, resiliência de problemas e inovação. Características em criar soluções inteligentes e facilitar o dia a dia
+                    com códigos limpos e de alta qualidade.
+                </p>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <!-- Objetivos -->
+        <section id="objetivos" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Objetivos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="content-card">
+                <p>
+                    Busco oportunidades para aplicar e ampliar meus conhecimentos em desenvolvimento de software, com foco em tecnologias
+                    modernas como Java, Python e ferramentas cloud computing. Meu objetivo é contribuir para projetos inovadores, aprender em
+                    um ambiente colaborativo e crescer minha carreira com experiências consistentes que valorizem impacto e diferença.
+                </p>
+            </div>
+        </section>
+
+        <!-- Competências Técnicas -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Competências Técnicas</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Spring Boot</h3>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-dot-circle"></i>
+                    </div>
+                    <h3>.NET Core</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL Server</h3>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-elephant"></i>
+                    </div>
+                    <h3>PostgreSQL</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Azure</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Redis/NoSQL</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JWT</h3>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Git</h3>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Entity Framework</h3>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiências -->
+        <section id="experiencias" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Experiências</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="experience-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2019 - Atual</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Desenvolvedor Full Stack</h3>
+                        <h4>Empresa Acadêmica</h4>
+                        <p>
+                            Desenvolvimento de APIs REST com Java Spring Boot, sistemas WCF com .NET, implementação de administração com e educação com
+                            tecnologia Educativa.
+                        </p>
+                        <div class="experience-skills">
+                            <span class="exp-skill">Java</span>
+                            <span class="exp-skill">Spring Boot</span>
+                            <span class="exp-skill">.NET WCF</span>
+                            <span class="exp-skill">SQL Server</span>
+                            <span class="exp-skill">Web</span>
+                            <span class="exp-skill">Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2019 - 2023</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Desenvolvedor Backend</h3>
+                        <h4>Projeto Acadêmico</h4>
+                        <p>
+                            Criação de sistemas web full stack integrados, CRUD com spring, gestão de arquivos e sistemas de agenda baseado na criação e a gerência
+                            de apontamentos.
+                        </p>
+                        <div class="experience-skills">
+                            <span class="exp-skill">Java</span>
+                            <span class="exp-skill">Spring Boot</span>
+                            <span class="exp-skill">PostgreSQL</span>
+                            <span class="exp-skill">JWT</span>
+                            <span class="exp-skill">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação & Certificações -->
+        <section id="formacao" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Formação & Certificações</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="formation-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Formação Acadêmica
+                </h3>
+                <div class="formation-card">
+                    <div class="formation-content">
+                        <h4>Análise e Desenvolvimento de Sistemas</h4>
+                        <p class="institution">UNISINOS da Praia</p>
+                        <div class="formation-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>2022 - 2024</span>
+                            <span class="status completed">EM ANDAMENTO</span>
+                        </div>
+                        <p class="formation-desc">Formação focada em desenvolvimento de software, metodologias ágeis, banco de dados e arquitetura de sistemas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certification-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-certificate"></i>
+                    Certificações
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <h4>Java Programming</h4>
+                            <span class="cert-year">2023</span>
+                        </div>
+                        <p class="cert-issuer">DevSuperior</p>
+                        <p class="cert-desc">Certificação completa em programação Java orientada a objetos.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <h4>Spring Boot Development</h4>
+                            <span class="cert-year">2023</span>
+                        </div>
+                        <p class="cert-issuer">DevSuperior</p>
+                        <p class="cert-desc">Especialização em desenvolvimento de aplicações web com Spring Boot.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-header">
+                            <h4>SQL Server Database Administration</h4>
+                            <span class="cert-year">2022</span>
+                        </div>
+                        <p class="cert-issuer">Microsoft</p>
+                        <p class="cert-desc">Administração e otimização de bancos de dados SQL Server.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos em Destaque -->
+        <section id="projetos" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-subtitle">Todos os projetos estão disponíveis no GitHub para visualização do código fonte.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Vinicius Becker</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link github">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">Portfolio</p>
+                        <p class="project-description">
+                            Site desenvolvido para apresentação de trabalhos acadêmicos no setor de TI. Aplicações, AJAX, layout de responsividade e validação de dados.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sistema MVC</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link github">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">Sistema Web</p>
+                        <p class="project-description">
+                            Sistema WEB completo com login Admin e gerenciamento de dados com performance ajustada e SQL queries otimizadas no Github.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>API de Vendas</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link github">
+                                <i class="fab fa-github"></i>
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">API REST</p>
+                        <p class="project-description">
+                            Projetando uma comunicação RestAPIs, microserviços em Java Spring Boot e sistemas em MongoDB com autenticação JWT.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Vamos Conversar?</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="contact-subtitle">
+                Estou sempre aberto a Devweb oportunidades e conversas sobre tecnologia, adoro trocar ideias sobre projetos inovadores.
+            </p>
+            <div class="contact-button-container">
+                <a href="#" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    Entrar em Contato
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Vinicius Becker Prediger. Desenvolvido com 💜 e muito café.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
