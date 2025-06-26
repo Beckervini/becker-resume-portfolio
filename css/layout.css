@@ -1,0 +1,242 @@
+
+/* Layout and positioning styles */
+
+/* Header Fixo */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.header-left h3 {
+    color: #4299e1;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.header-right {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Menu Lateral */
+.sidebar {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.02);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Conteúdo Principal - Melhor Centralização */
+.main-content {
+    margin-left: 280px;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Container centralizado para melhor layout */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Seções */
+.section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Grids */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Timeline de Experiências */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Rodapé */
+.footer {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Menu Mobile Toggle */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 100px;
+        transform: none;
+        transition: left 0.3s ease;
+        width: 220px;
+    }
+
+    .sidebar.active {
+        left: 1rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .project-links {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-left h3 {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        margin-top: 140px;
+        padding: 0.5rem;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-skills,
+    .project-tech {
+        justify-content: center;
+    }
+}
