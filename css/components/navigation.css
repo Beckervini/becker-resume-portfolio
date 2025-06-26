@@ -1,0 +1,62 @@
+
+/* Navigation Components */
+
+.nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(49, 130, 206, 0.05));
+    transform: translateX(-100%);
+    transition: transform 0.1s ease;
+    border-radius: 8px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    border-radius: 0 3px 3px 0;
+    transition: height 0.1s ease;
+}
+
+.nav-link:hover::before {
+    transform: translateX(0);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+    transform: translateX(4px);
+    box-shadow: 0 3px 10px rgba(66, 153, 225, 0.3);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    height: 60%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link.active {
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+}

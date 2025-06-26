@@ -1,0 +1,82 @@
+
+/* Button Components */
+
+/* Social Buttons */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #4299e1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+}
+
+.social-btn:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(66, 153, 225, 0.3);
+}
+
+.social-btn.github {
+    background: #2d3748;
+}
+
+.social-btn.github:hover {
+    background: #1a202c;
+    box-shadow: 0 3px 8px rgba(45, 55, 72, 0.3);
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 20px rgba(66, 153, 225, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(66, 153, 225, 0.4);
+    background: linear-gradient(135deg, #3182ce, #2c5aa0);
+}
+
+.contact-button-container {
+    text-align: center;
+}
+
+/* Project Links */
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+.project-link.github {
+    background: #2d3748;
+    color: white;
+}
+
+.project-link.github:hover {
+    background: #1a202c;
+    transform: translateY(-1px);
+}
