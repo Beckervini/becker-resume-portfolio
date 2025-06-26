@@ -13,14 +13,14 @@
     border-radius: 8px;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     border: 2px solid transparent;
 }
 
 .social-btn:hover {
     background: #3182ce;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(66, 153, 225, 0.3);
 }
 
 .social-btn.github {
@@ -29,7 +29,7 @@
 
 .social-btn.github:hover {
     background: #1a202c;
-    box-shadow: 0 4px 12px rgba(45, 55, 72, 0.3);
+    box-shadow: 0 3px 8px rgba(45, 55, 72, 0.3);
 }
 
 .contact-btn {
@@ -43,13 +43,13 @@
     border-radius: 12px;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     box-shadow: 0 4px 20px rgba(66, 153, 225, 0.3);
 }
 
 .contact-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(66, 153, 225, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(66, 153, 225, 0.4);
     background: linear-gradient(135deg, #3182ce, #2c5aa0);
 }
 
@@ -65,7 +65,7 @@
     text-decoration: none;
     border-radius: 8px;
     font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
@@ -79,7 +79,7 @@
     height: 100%;
     background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(49, 130, 206, 0.05));
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     border-radius: 8px;
 }
 
@@ -93,7 +93,7 @@
     height: 0;
     background: linear-gradient(135deg, #4299e1, #3182ce);
     border-radius: 0 3px 3px 0;
-    transition: height 0.3s ease;
+    transition: height 0.2s ease;
 }
 
 .nav-link:hover::before {
@@ -105,7 +105,7 @@
     background: linear-gradient(135deg, #4299e1, #3182ce);
     color: white;
     transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+    box-shadow: 0 3px 10px rgba(66, 153, 225, 0.3);
 }
 
 .nav-link:hover::after,
@@ -115,7 +115,7 @@
 }
 
 .nav-link.active {
-    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
 }
 
 /* Cards */
@@ -125,7 +125,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(20px);
     opacity: 0;
 }
@@ -136,8 +136,9 @@
 }
 
 .content-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(66, 153, 225, 0.3);
 }
 
 .content-card p {
@@ -153,7 +154,7 @@
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     transform: translateY(30px);
     opacity: 0;
@@ -181,7 +182,7 @@
     font-size: 2.5rem;
     color: #4299e1;
     margin-bottom: 1rem;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .skill-card:hover .skill-icon {
@@ -212,9 +213,10 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(-30px);
     opacity: 0;
+    cursor: pointer;
 }
 
 .section.visible .experience-card {
@@ -226,8 +228,9 @@
 .experience-card:nth-child(2) { transition-delay: 0.3s; }
 
 .experience-card:hover {
-    transform: translateX(12px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-color: rgba(66, 153, 225, 0.3);
 }
 
 .experience-date {
@@ -286,12 +289,14 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .formation-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-color: rgba(66, 153, 225, 0.3);
 }
 
 .formation-content h4 {
@@ -341,12 +346,14 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .cert-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-color: rgba(66, 153, 225, 0.3);
 }
 
 .cert-header {
@@ -390,9 +397,10 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(30px);
     opacity: 0;
+    cursor: pointer;
 }
 
 .section.visible .project-card {
@@ -405,8 +413,9 @@
 .project-card:nth-child(3) { transition-delay: 0.3s; }
 
 .project-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(66, 153, 225, 0.3);
 }
 
 .project-header {
@@ -438,7 +447,7 @@
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .project-link.github {
@@ -448,7 +457,7 @@
 
 .project-link.github:hover {
     background: #1a202c;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .project-content {
@@ -630,7 +639,7 @@
     }
 
     .experience-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
     }
 
     .skill-card:hover {
@@ -638,6 +647,15 @@
     }
 
     .project-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
+    }
+
+    .content-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .formation-card:hover,
+    .cert-card:hover {
+        transform: translateY(-2px);
     }
 }
