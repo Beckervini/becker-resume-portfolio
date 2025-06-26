@@ -5,26 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Becker Prediger - Portfólio</title>
+    
+    <!-- CSS modular -->
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Portfólio de Vinicius Becker Prediger - Desenvolvedor Backend & Full Stack">
+    <meta name="keywords" content="desenvolvedor, java, spring boot, backend, full stack">
+    <meta name="author" content="Vinicius Becker Prediger">
 </head>
-<body>
+<body class="loading">
     <!-- Header Fixo -->
-    <header class="header-fixed">
+    <header class="header-fixed" role="banner">
         <div class="header-content">
             <div class="header-left">
                 <h3>Currículo Vinicius Becker</h3>
             </div>
             <div class="header-right">
-                <a href="#" class="social-btn linkedin">
-                    <i class="fab fa-linkedin-in"></i>
+                <a href="#" class="social-btn linkedin" aria-label="Perfil no LinkedIn">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     LinkedIn
                 </a>
-                <a href="#" class="social-btn github">
-                    <i class="fab fa-github"></i>
+                <a href="#" class="social-btn github" aria-label="Perfil no GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                     GitHub
                 </a>
             </div>
@@ -32,7 +44,7 @@
     </header>
 
     <!-- Menu Lateral -->
-    <nav class="sidebar">
+    <nav class="sidebar" role="navigation" aria-label="Menu principal">
         <div class="sidebar-content">
             <ul class="nav-menu">
                 <li><a href="#sobre" class="nav-link active">Sobre</a></li>
@@ -47,7 +59,7 @@
     </nav>
 
     <!-- Conteúdo Principal -->
-    <main class="main-content">
+    <main class="main-content" role="main">
         <div class="content-wrapper">
             <!-- Seção Sobre -->
             <section id="sobre" class="section hero-section">
@@ -386,12 +398,13 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <p>&copy; 2024 Vinicius Becker Prediger. Desenvolvido com 💜 e muito café.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts modulares -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
