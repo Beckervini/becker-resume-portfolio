@@ -9,7 +9,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.1s ease;
+    transition: all 0.05s ease; /* Ultra-fast transitions */
     cursor: pointer;
 }
 

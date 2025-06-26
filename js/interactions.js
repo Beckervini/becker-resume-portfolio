@@ -101,33 +101,12 @@ export class InteractionManager {
     }
     
     setupCardInteractions() {
-        const skillCards = document.querySelectorAll('.skill-card');
-        skillCards.forEach(card => {
-            card.addEventListener('mouseenter', () => this.animateCardEnter(card));
-            card.addEventListener('mouseleave', () => this.animateCardLeave(card));
+        // Remove all custom card hover handlers - let CSS handle everything instantly
+        const allCards = document.querySelectorAll('.skill-card, .experience-card, .project-card, .content-card, .formation-card, .cert-card');
+        allCards.forEach(card => {
+            // Remove any existing event listeners that might cause delays
+            card.replaceWith(card.cloneNode(true));
         });
-    }
-    
-    animateCardEnter(card) {
-        const icon = card.querySelector('.skill-icon i');
-        if (icon) {
-            // Instant transition
-            icon.style.transition = 'all 0.1s ease';
-            icon.style.transform = 'scale(1.1)';
-            icon.style.color = 'white';
-        }
-        card.style.borderColor = '#4299e1';
-    }
-    
-    animateCardLeave(card) {
-        const icon = card.querySelector('.skill-icon i');
-        if (icon) {
-            // Instant transition
-            icon.style.transition = 'all 0.1s ease';
-            icon.style.transform = 'scale(1)';
-            icon.style.color = 'white';
-        }
-        card.style.borderColor = 'rgba(226, 232, 240, 0.8)';
     }
     
     setupButtonEffects() {

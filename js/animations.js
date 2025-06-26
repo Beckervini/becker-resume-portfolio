@@ -1,3 +1,4 @@
+
 import { CONFIG } from './config.js';
 
 // Classe para gerenciar animações
@@ -38,18 +39,20 @@ export class AnimationManager {
         section.style.transform = 'translateY(0)';
         section.classList.add(CONFIG.CLASSES.VISIBLE);
         
-        // Anima elementos filhos
+        // Anima elementos filhos instantaneamente
         const animatedElements = section.querySelectorAll(CONFIG.SELECTORS.CARDS);
-        this.staggerAnimation(animatedElements);
+        this.instantAnimation(animatedElements);
     }
     
-    // Animação simultânea para elementos (sem delay escalonado)
-    staggerAnimation(elements) {
+    // Animação instantânea para todos os elementos (sem qualquer delay)
+    instantAnimation(elements) {
         elements.forEach((element) => {
-            // Remove o delay baseado no index - todos animam ao mesmo tempo
+            // Todos os elementos animam instantaneamente sem delay
             element.style.opacity = '1';
             element.style.transform = 'translateY(0)';
-            element.style.animation = 'subtle-bounce 0.6s ease';
+            element.classList.add('animate');
+            // Remove qualquer animação de bounce para evitar delays adicionais
+            element.style.animation = 'none';
         });
     }
     
@@ -107,12 +110,6 @@ export class AnimationManager {
             const style = document.createElement('style');
             style.id = 'dynamic-animations';
             style.textContent = `
-                @keyframes subtle-bounce {
-                    0% { transform: translateY(20px); }
-                    60% { transform: translateY(-5px); }
-                    100% { transform: translateY(0); }
-                }
-                
                 @keyframes ripple {
                     to {
                         transform: scale(2.5);

@@ -65,12 +65,12 @@
 
 /* Conteúdo Principal - Melhor Centralização */
 .main-content {
-    margin-left: 280px;
+    margin-left: 300px; /* Fixed margin to account for sidebar */
+    margin-right: 2rem; /* Balanced right margin */
     margin-top: 100px;
     padding: 2rem;
     max-width: 1000px;
-    width: calc(100% - 320px); /* Account for sidebar + margins */
-    margin-right: 2rem; /* Ensure right margin matches left spacing */
+    width: calc(100vw - 340px); /* Calculate remaining width */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -127,8 +127,6 @@
     gap: 2rem;
 }
 
-/* ... keep existing code (footer, mobile menu toggle, and media queries) */
-
 /* Rodapé */
 .footer {
     background: linear-gradient(135deg, #2d3748, #1a202c);
@@ -178,9 +176,9 @@
 
     .main-content {
         margin-left: 0;
+        margin-right: 0;
         padding: 1rem;
         width: 100%;
-        margin-right: 0;
     }
 
     .header-content {
