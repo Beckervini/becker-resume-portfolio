@@ -1,0 +1,120 @@
+
+/* Experience Cards Component Styles */
+
+.experience-section {
+    position: relative;
+}
+
+.experience-section::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #4299e1 0%, #667eea 100%);
+    z-index: 1;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.1s ease;
+    transform: translateX(-30px);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.experience-card.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Remove nth-child delays for experience cards */
+.experience-card:nth-child(1) { transition-delay: 0.1s; }
+.experience-card:nth-child(2) { transition-delay: 0.3s; }
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    background: #4299e1;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #4299e1;
+    z-index: 2;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(66, 153, 225, 0.15);
+    border-color: #4299e1;
+}
+
+.experience-card:hover::before {
+    background: #3182ce;
+    box-shadow: 0 0 0 3px #3182ce, 0 0 20px rgba(49, 130, 206, 0.4);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.experience-company {
+    font-size: 1.1rem;
+    color: #4299e1;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    background: linear-gradient(135deg, #4299e1, #667eea);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.experience-description {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience-skill {
+    background: rgba(66, 153, 225, 0.1);
+    color: #3182ce;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
