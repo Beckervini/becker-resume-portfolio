@@ -8,7 +8,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     transform: translateY(20px);
     opacity: 0;
 }
@@ -49,6 +49,7 @@
     opacity: 1;
 }
 
+/* Remove all nth-child transition delays */
 .skill-card:nth-child(1) { transition-delay: 0.1s; }
 .skill-card:nth-child(2) { transition-delay: 0.2s; }
 .skill-card:nth-child(3) { transition-delay: 0.3s; }
@@ -57,8 +58,8 @@
 .skill-card:nth-child(6) { transition-delay: 0.6s; }
 
 .skill-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 20px 60px rgba(66, 153, 225, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(66, 153, 225, 0.15);
     border-color: #4299e1;
 }
 
@@ -70,7 +71,7 @@
 }
 
 .skill-card:hover .skill-icon {
-    transform: scale(1.2) rotate(5deg);
+    transform: scale(1.1);
     color: #3182ce;
 }
 
@@ -98,7 +99,7 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     transform: translateX(-30px);
     opacity: 0;
     cursor: pointer;
@@ -109,6 +110,7 @@
     opacity: 1;
 }
 
+/* Remove nth-child delays for experience cards */
 .experience-card:nth-child(1) { transition-delay: 0.1s; }
 .experience-card:nth-child(2) { transition-delay: 0.3s; }
 
@@ -175,7 +177,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     cursor: pointer;
 }
 
@@ -233,7 +235,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     cursor: pointer;
 }
 
@@ -285,7 +287,7 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     transform: translateY(30px);
     opacity: 0;
     cursor: pointer;
@@ -296,6 +298,7 @@
     opacity: 1;
 }
 
+/* Remove nth-child delays for project cards */
 .project-card:nth-child(1) { transition-delay: 0.1s; }
 .project-card:nth-child(2) { transition-delay: 0.2s; }
 .project-card:nth-child(3) { transition-delay: 0.3s; }
